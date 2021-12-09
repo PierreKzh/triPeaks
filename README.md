@@ -1,2 +1,2 @@
 # triPeaks
-Mini projet algo &amp; C
+Mini projet algo &amp; C.
