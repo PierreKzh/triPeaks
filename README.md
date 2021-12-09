@@ -1,4 +1,4 @@
-#triPeaks
+**triPeaks**
 
 Mini projet algo & C
 
