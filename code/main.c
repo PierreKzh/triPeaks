@@ -1,7 +1,3 @@
-/*
-Romain Gadani
- */
-
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
@@ -25,48 +21,48 @@ struct Card {
 
 struct TreeCards {
     struct sCard* IdCard;
-    char FirstRightImaginary;   // &AdresseMemoire
-    char FirstLeftImaginary;    // &AdresseMemoire
+    sCard* FirstRightImaginary;   // &AdresseMemoire
+    sCard* FirstLeftImaginary;    // &AdresseMemoire
 };
 typedef struct TreeCards sTreeCards;
 
 struct ListCards {
-    struct sCard* IdCard;
-    char First;         // &AdresseMemoire
-    char Last;          // &AdresseMemoire
+    sCard* First;       // &AdresseMemoire
+    sCard* Last;        // &AdresseMemoire
     int NumberElements; // 1 to (max) 52
 };
 typedef struct ListCards  sListCards;
 
 
-
-
-void InitialisationCards(sListCards *list, sCard *tab) {
-    sCard next;
-    sCard previous;
-
+void InitialisationCards(sCard *tab) {
     char symboltab[4] = { 'c', 'p', 't', 'h' };
 
     int i = 1;
-    int x = 1;
+    int x = 0;
 
     while (i <= 13) {
         int j = 0;
         while (j <= 3) {
             tab[x].Symbol = symboltab[j];
             tab[x].Number = i;
-            j += 1;
             tab[x].IdCard = x;
+            tab[x].ReturnedCard = 0;
+            tab[x].CardSlot = 0;
+            tab[x].RightChild = NULL;
+            tab[x].LeftChild = NULL;
+            tab[x].RightParent = NULL;
+            tab[x].LeftParent = NULL;
+            tab[x].Next = NULL;
+            tab[x].Previous = NULL;
+            printf("%d, %c\n", tab[x].Number, tab[x].Symbol);
+            j += 1;
             x += 1;
-            printf("%d, %s\n", tab[x].Number, tab[x].Symbol);
         }
         i += 1;    
     }
-    printf("%p, %", list->Last, list->First);
 }
 
 int main(void) {
-    sListCards list;
     sCard tab[52];
-    InitialisationCards(&list, *tab);
+    InitialisationCards(&tab);
 }
