@@ -36,3 +36,9 @@ struct ListCards {
     int NumberElements; // 1 to (max) 52
 };
 typedef struct ListCards  sListCards;
+
+void InitialisationCards()
+
+int main(void) {
+
+}
