@@ -5,6 +5,7 @@
 #include "struct.h"
 #include "win.h"
 #include "InitialisationCards.h"
+#include "ShuffleCards.h"
 
 int main() {
 
@@ -12,13 +13,17 @@ int main() {
     sCard tab[52];
     InitialisationCards(&tab);
 
+    //=========ShuffleCards test=========
+    ShuffleCards(&tab);
+
+
     //=========win test=========
     sListCards Reserve;
     sListCards Fondation;
     Reserve.NumberElements = 24;
     Fondation.NumberElements = 25;
-    printf("\n%d",win(&Reserve, &Fondation));
-    
+    printf("\n%d", win(&Reserve, &Fondation));
+
 
     return 0;
 }
