@@ -23,8 +23,8 @@
     <ClInclude Include="struct.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="fonction.c">
-      <Filter>Fichiers sources</Filter>
+    <ClInclude Include="fonction.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
