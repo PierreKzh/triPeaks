@@ -33,3 +33,4 @@ struct ListCards {
 typedef struct ListCards  sListCards;
 
 void InitialisationCards(sCard* tab);
+void ShuffleCards(sCard* tab);
