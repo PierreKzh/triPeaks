@@ -37,8 +37,56 @@ struct ListCards {
 };
 typedef struct ListCards  sListCards;
 
-void InitialisationCards()
+void InitialisationCards(sListCards *list) {
+    sCard car;
+    sCard carnext;
+    sCard carprevious;
+
+    int i = 1;
+    int x = 1;
+
+    while (i <= 13) {
+        int j = 1;
+        while (j <= 4) {
+            if (j == 1) {
+                car.Symbol = "carreau";
+            }
+            else if (j == 2) {
+                car.Symbol = "pic";
+            }
+            else if (j == 3) {
+                car.Symbol = "trefle";
+            }
+            else if (j == 4) {
+                car.Symbol = "coeur";
+            }
+
+            if (i == 1 && j == 1) {
+                list->First = &car;
+                car.Next = &carprevious;
+            }
+            else if (i == 13 && j == 4) {
+                list->Last = &car;
+                car.Previous = &carprevious;
+            }
+            else if () {
+
+            }
+            
+            car.Number = i;
+            j += 1;
+
+            car.IdCard = x;
+            x += 1;
+            
+            list-
+
+        }
+        i += 1;    
+    }   
+}
 
 int main(void) {
-
+    sListCards *list;
+    InitialisationCards(*list);
 }
