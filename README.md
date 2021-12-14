@@ -1,3 +1,9 @@
+# TriPeaks
 
-test
-projet de jb, pierre et romain
+1. Contexte
+3. Les tâches
+
+
+Mini projet algo & C
+
+*Jean-Baptiste, Romain, Pierre*
