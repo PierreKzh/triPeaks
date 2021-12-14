@@ -3,6 +3,6 @@
 Mini projet algo & C
 
 
-test
+Test 2 
 
 *Jean-Baptiste, Romain, Pierre*
