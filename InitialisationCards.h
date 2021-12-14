@@ -11,7 +11,7 @@ void InitialisationCards(sCard* tab) {
     while (i <= 13) {
         int j = 0;
         while (j <= 3) {
-            // Inite cards
+            // Init cards
             tab[x].Symbol = symboltab[j];
             tab[x].Number = i;
             tab[x].IdCard = x;
