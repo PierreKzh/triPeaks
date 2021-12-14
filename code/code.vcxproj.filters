@@ -23,7 +23,7 @@
     <ClInclude Include="struct.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="fonction.h">
+    <ClInclude Include="InitialisationCards.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>

@@ -24,11 +24,13 @@ void InitialisationCards(sCard* tab) {
             tab[x].Next = NULL;
             tab[x].Previous = NULL;
             printf("%d, %c\n", tab[x].Number, tab[x].Symbol);
+            printf("%d\n\n", x);
             j += 1;
             x += 1;
         }
         i += 1;
     }
+    printf("%d", x);
 }
 
 void InitialisationCards(sCard* tab);

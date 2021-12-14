@@ -1,4 +1,4 @@
 ﻿  main.c
-C:\Users\Romain\Desktop\Cours\C\triPeaks\code\main.c(12,29): warning C4047: 'fonction' : les niveaux d'indirection de 'sCard *' et de 'sCard (*)[52]' sont différents
-C:\Users\Romain\Desktop\Cours\C\triPeaks\code\main.c(12,25): warning C4024: 'InitialisationCards' : types différents pour le paramètre formel et réel 1
+C:\Users\Romain\Desktop\Cours\C\triPeaks\code\main.c(10,29): warning C4047: 'fonction' : les niveaux d'indirection de 'sCard *' et de 'sCard (*)[52]' sont différents
+C:\Users\Romain\Desktop\Cours\C\triPeaks\code\main.c(10,25): warning C4024: 'InitialisationCards' : types différents pour le paramètre formel et réel 1
   code.vcxproj -> C:\Users\Romain\Desktop\Cours\C\triPeaks\code\Debug\code.exe
