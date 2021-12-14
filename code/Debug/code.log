@@ -1,0 +1,10 @@
+﻿  main.c
+C:\Users\Romain\Desktop\Cours\C\triPeaks\code\main.c(61,20): warning C4477: 'printf' : la chaîne de format '%s' nécessite un argument de type 'char *', mais l'argument variadique 2 est de type 'int'
+C:\Users\Romain\Desktop\Cours\C\triPeaks\code\main.c(65,12): warning C4477: 'printf' : la chaîne de format '%p' nécessite un argument de type 'void *', mais l'argument variadique 1 est de type 'int'
+C:\Users\Romain\Desktop\Cours\C\triPeaks\code\main.c(65,12): warning C4778: 'printf' : chaîne de format indéterminée '%'
+C:\Users\Romain\Desktop\Cours\C\triPeaks\code\main.c(65,37): warning C4474: 'printf' : trop d'arguments passés pour la chaîne de format
+C:\Users\Romain\Desktop\Cours\C\triPeaks\code\main.c(65,37): message : les espaces réservés et leurs paramètres attendent des arguments 1 variadiques, mais des arguments 2 ont été fournis
+C:\Users\Romain\Desktop\Cours\C\triPeaks\code\main.c(45,11): warning C4101: 'next' : variable locale non référencée
+C:\Users\Romain\Desktop\Cours\C\triPeaks\code\main.c(46,11): warning C4101: 'previous' : variable locale non référencée
+C:\Users\Romain\Desktop\Cours\C\triPeaks\code\main.c(71,36): error C2440: 'fonction' : impossible de convertir de 'sCard' en 'sCard *'
+C:\Users\Romain\Desktop\Cours\C\triPeaks\code\main.c(71,32): warning C4024: 'InitialisationCards' : types différents pour le paramètre formel et réel 2
