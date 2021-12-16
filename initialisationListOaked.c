@@ -1,3 +1,5 @@
+#include "structures.h"
+
 void InitialisationListeOaked(sCard* tabCard, sListCards* Reserve, sListCards* Fondation) {
     /*
     This fonction get the table card and Reserve and Fondation, create before.
