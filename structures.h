@@ -39,3 +39,4 @@ void InitialisationCards(sCard* tab);
 void ShuffleCards(sCard* tab);
 void InitialisationPyramide(sCard* tab);
 int win(sListCards* Reserve, sListCards* Fondation);
+void InitialisationListeOaked(sCard* tabCard, sListCards* Reserve, sListCards* Fondation);

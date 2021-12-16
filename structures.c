@@ -2,25 +2,6 @@
 
 /*==================================================================================================================================*/
 
-int win(sListCards* Reserve, sListCards* Fondation) {
-    /*
-    This fonction get the Reserve's address and the Fondation's address.
-    Then do a sum of numbersElements of the Reserve and the Fondation.
-    If the number elements of the Reserve and Fondation equal 52, it would say that all cards of the tree as been set.
-    @param sListCards *Reserve : object Reserve
-    @param sListCards *Fondation : object Fondation
-    @return int : 1 for win, 0 for loose
-    */
-    int NumberCards = 0;
-    NumberCards += Reserve->NumberElements;
-    NumberCards += Fondation->NumberElements;
-    if (NumberCards == 52) {
-        return 1;
-    }
-    else {
-        return 0;
-    }
-}
 
 /*==================================================================================================================================*/
 
@@ -32,7 +13,7 @@ void random(sCard* tab) {
     for (int i = NbCards - 1; i > 0; i--) {
         // Random Position between 0 and i
         int RandomPosition = rand() % (i + 1);
-        // Exchange Position
+        // Starts the function exchange
         sCard tmp;
         tmp = tab[i];
         tab[i] = tab[RandomPosition];
@@ -58,8 +39,7 @@ void ShuffleCards(sCard* tab) {
     printf("\n");
 
     for (i = 0; i < NbCards; i++) {
-        tab[i].IdCard = i+1;
-        printf("%2d - %d, %c\n", tab[i].IdCard, tab[i].Number, tab[i].Symbol);
+        printf("%2d - %d, %c\n", i + 1, tab[i].Number, tab[i].Symbol);
     }
 }
 
