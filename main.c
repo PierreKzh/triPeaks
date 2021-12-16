@@ -1,6 +1,5 @@
 #include "structures.h"
 
-
 int main(void) {
 
     //=========InitialistionCards test=========
