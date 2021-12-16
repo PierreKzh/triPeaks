@@ -2,6 +2,9 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+
+#define NbCards 52
 
 typedef struct Card sCard;
 struct Card {
@@ -34,3 +37,5 @@ typedef struct ListCards  sListCards;
 
 void InitialisationCards(sCard* tab);
 void ShuffleCards(sCard* tab);
+void InitialisationPyramide(sCard* tab);
+int win(sListCards* Reserve, sListCards* Fondation);

@@ -1,21 +1,14 @@
-#define _CRT_SECURE_NO_WARNINGS
+#include "structures.h"
 
-#include <stdio.h>
-#include <stdlib.h>
-#include "struct.h"
-#include "win.h"
-#include "InitialisationCards.h"
-#include "ShuffleCards.h"
 
-int main() {
+int main(void) {
 
     //=========InitialistionCards test=========
-    sCard tab[52];
-    InitialisationCards(&tab);
+    sCard TabCard[52];
+    InitialisationCards(&TabCard);
 
     //=========ShuffleCards test=========
-    ShuffleCards(&tab);
-
+    ShuffleCards(&TabCard);
 
     //=========win test=========
     sListCards Reserve;
@@ -24,6 +17,8 @@ int main() {
     Fondation.NumberElements = 25;
     printf("\n%d", win(&Reserve, &Fondation));
 
+    //=========initialisationPyramide test=========
+    InitialisationPyramide(&TabCard);
 
     return 0;
 }
