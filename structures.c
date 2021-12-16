@@ -32,7 +32,7 @@ void random(sCard* tab) {
     for (int i = NbCards - 1; i > 0; i--) {
         // Random Position between 0 and i
         int RandomPosition = rand() % (i + 1);
-        // Starts the function exchange
+        // Exchange Position
         sCard tmp;
         tmp = tab[i];
         tab[i] = tab[RandomPosition];
@@ -58,7 +58,8 @@ void ShuffleCards(sCard* tab) {
     printf("\n");
 
     for (i = 0; i < NbCards; i++) {
-        printf("%2d - %d, %c\n", i + 1, tab[i].Number, tab[i].Symbol);
+        tab[i].IdCard = i+1;
+        printf("%2d - %d, %c\n", tab[i].IdCard, tab[i].Number, tab[i].Symbol);
     }
 }
 
