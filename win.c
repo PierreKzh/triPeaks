@@ -1,4 +1,4 @@
-#include "structures.h"
+#include "win.h"
 
 int win(sListCards* Reserve, sListCards* Fondation) {
     /**
