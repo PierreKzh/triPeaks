@@ -10,7 +10,7 @@ void InitialisationListeOaked(sCard* tabCard, sListCards* Reserve, sListCards* F
     @param  sListCards *Fondation : object Fondation
     */
     //Reserve
-    sCard *current = &tabCard[28];
+    sCard *current;
     Reserve->First = &tabCard[28];
     Reserve->Last = &tabCard[50];
     Reserve->Last->Previous = &tabCard[49];
