@@ -1,4 +1,4 @@
-#include "structures.h"
+#include "initialisationListOaked.h"
 
 void InitialisationListeOaked(sCard* tabCard, sListCards* Reserve, sListCards* Fondation) {
     /*
