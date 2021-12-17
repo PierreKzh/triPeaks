@@ -30,7 +30,7 @@ int main(void) {
     printf("\nnb element fondation : %d\n", Fondation2.NumberElements);
 
     //=========AffichagePyramide test=========
-    AffichagePlateau(&TabCard);
+    AffichagePlateau(&TabCard, &Fondation2);
 
     //=========Surname test=========
     sPlayer play;

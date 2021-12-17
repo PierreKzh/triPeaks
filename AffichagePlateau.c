@@ -89,6 +89,14 @@ void AffichagePyramide(sCard* tab) {
     }
 }
 
-void AffichagePlateau(sCard tab) {
+void AffichageListes(sListCards* Fondation) {
+    printf("\n\n\n[X..X]  [>][>]  ");
+    AffichageCarte(Fondation->Last->Number, Fondation->Last->Symbol);
+    printf("\n");
+
+}
+
+void AffichagePlateau(sCard tab, sListCards* Fondation) {
     AffichagePyramide(&tab);
+    AffichageListes(Fondation);
 }
