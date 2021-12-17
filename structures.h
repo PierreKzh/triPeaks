@@ -35,6 +35,11 @@ struct ListCards {
 };
 typedef struct ListCards  sListCards;
 
+struct Player {
+    char* surname;
+};
+typedef struct Player sPlayer;
+
 void InitialisationCards(sCard* tab);
 void ShuffleCards(sCard* tab);
 void InitialisationPyramide(sCard* tab);
@@ -43,3 +48,4 @@ void InitialisationListeOaked(sCard* tabCard, sListCards* Reserve, sListCards* F
 void AffichagePyramide(sCard* tab);
 void AffichageCarte(number, symbol);
 char AffichageCase(number);
+void Surname(sPlayer* play);

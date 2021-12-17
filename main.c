@@ -28,5 +28,11 @@ int main(void) {
     InitialisationListeOaked(&TabCard, &Reserve2, &Fondation2);
     printf("\nnb elements reserve : %d", Reserve2.NumberElements);
     printf("\nnb element fondation : %d", Fondation2.NumberElements);
+
+    //=========Surname test=========
+    sPlayer play;
+    Surname(&play);
+    free(play.surname);
+
     return 0;
 }
