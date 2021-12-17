@@ -1,6 +1,6 @@
-#include "AffichagePyramide.h"
+#include "AffichagePlateau.h"
 
-//JeanBaptiste F & Romain G
+//JeanBaptiste F & Romain G & Pierre K
 
 char AffichageCaseToLetter(int number) {
     char lettre;
