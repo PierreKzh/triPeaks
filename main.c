@@ -27,12 +27,22 @@ int main(void) {
     Fondation2.NumberElements = 0;
     InitialisationListeOaked(&TabCard, &Reserve2, &Fondation2);
     printf("\nnb elements reserve : %d", Reserve2.NumberElements);
-    printf("\nnb element fondation : %d", Fondation2.NumberElements);
+    printf("\nnb element fondation : %d\n", Fondation2.NumberElements);
+
+    //=========AffichagePyramide test=========
+    AffichagePyramide(&TabCard);
 
     //=========Surname test=========
     sPlayer play;
     Surname(&play);
     free(play.surname);
+
+    //==========DrawCard test==================
+    printf("\ndernier de reserve  : %d", Reserve2.Last->IdCard);
+    printf("\ndernier de fondation  : %d", Fondation2.Last->IdCard);
+    DrawCard(&Reserve2, &Fondation2);
+    printf("\ndernier de reserve  : %d", Reserve2.Last->IdCard);
+    printf("\ndernier de fondation  : %d", Fondation2.Last->IdCard);
 
     return 0;
 }

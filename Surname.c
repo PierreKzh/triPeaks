@@ -1,5 +1,7 @@
 #include "Surname.h"
 
+//Romain G
+
 void Surname(sPlayer* play) {
     printf("\n\nEntrez un pseudo\n: ");
     play->surname = malloc(sizeof(sPlayer));

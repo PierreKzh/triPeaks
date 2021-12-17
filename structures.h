@@ -47,5 +47,6 @@ int win(sListCards* Reserve, sListCards* Fondation);
 void InitialisationListeOaked(sCard* tabCard, sListCards* Reserve, sListCards* Fondation);
 void AffichagePyramide(sCard* tab);
 void AffichageCarte(number, symbol);
-char AffichageCase(number);
+char AffichageCaseToLetter(number);
 void Surname(sPlayer* play);
+void DrawCard(sListCards* Reserve, sListCards* Fondation);

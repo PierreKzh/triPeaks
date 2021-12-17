@@ -1,5 +1,7 @@
 #include "ShuffleCards.h"
 
+//Jean-Baptiste F
+
 // Function Random position allocation
 void random(sCard* tab) {
     //Initialise srand sur le temps actuel

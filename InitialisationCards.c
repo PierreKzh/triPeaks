@@ -1,5 +1,7 @@
 #include "InitialisationCards.h"
 
+//Romain G
+
 // Function to init all card
 void InitialisationCards(sCard* tab) {
     char symboltab[4] = { 'c', 'p', 't', 'h' };
