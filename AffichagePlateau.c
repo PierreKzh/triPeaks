@@ -88,3 +88,7 @@ void AffichagePyramide(sCard* tab) {
         }
     }
 }
+
+void AffichagePlateau(sCard tab) {
+    AffichagePyramide(&tab);
+}
