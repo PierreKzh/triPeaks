@@ -10,18 +10,20 @@ void InitialisationListeOaked(sCard* tabCard, sListCards* Reserve, sListCards* F
     @param  sListCards *Fondation : object Fondation
     */
     //Reserve
+    sCard *current;
     Reserve->First = &tabCard[28];
-    Reserve->Last = &tabCard[28];
+    Reserve->Last = &tabCard[50];
+    Reserve->Last->Previous = &tabCard[49];
     Reserve->NumberElements++;
-    for (int i = 29; i < 51; i++) {
-        tabCard[i].CardSlot = 1;
-        Reserve->Last->Next = &tabCard[i];
-        tabCard[i].Previous = Reserve->Last;
-        Reserve->Last = &tabCard[i];
+    for (int i = 29; i < 50; i++) {
+        current = &tabCard[i];
+        current->Next = &tabCard[i + 1];
+        current->Previous = &tabCard[i - 1];
+        current->CardSlot = 2;
         Reserve->NumberElements++;
     }
     //Fondation
-    tabCard[51].CardSlot = 2;
+    tabCard[51].CardSlot = 3;
     Fondation->First = &tabCard[51];
     Fondation->Last = &tabCard[51];
     Fondation->NumberElements++;
