@@ -31,11 +31,11 @@ void ShuffleCards(sCard* tab) {
     }
 
     // Starts the function to retrieve the new positions of the cards 
-    printf("\n===After shuffling===\n");
+    //printf("\n===After shuffling===\n");
     random(tab);
-    printf("\n");
+    //printf("\n");
 
-    for (i = 0; i < NbCards; i++) {
+    /*for (i = 0; i < NbCards; i++) {
         printf("%2d - %d, %c\n", i + 1, tab[i].Number, tab[i].Symbol);
-    }
+    }*/
 }

@@ -11,7 +11,7 @@ struct Card {
     int Number;         // 1 to 13
     char Symbol;        // carreau or pic or trefle or coeur
     int ReturnedCard;   // 0 or 1
-    int CardSlot;       // 0 or 1 or 2
+    int CardSlot;       // 0 = no slot or 1 = tree or 2 = reserve or 3 = fondation
     int IdCard;         // 1 to 52
     sCard* RightChild;  // FALSE or &AdresseMemoire
     sCard* LeftChild;   // FALSE or &AdresseMemoire
@@ -48,3 +48,4 @@ void InitialisationListeOaked(sCard* tabCard, sListCards* Reserve, sListCards* F
 void AffichagePlateau(sCard* tab);
 void Surname(sPlayer* play);
 void DrawCard(sListCards* Reserve, sListCards* Fondation);
+void PickCard(sCard* tabcard, sListCards* Fondation, int cardvalue, char cardColor);

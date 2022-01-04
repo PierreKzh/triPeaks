@@ -7,19 +7,19 @@ char AffichageCaseToLetter(int number) {
 
     switch (number) {
     case 1:
-        lettre = 'A';
+        lettre = 'a';
         break;
     case 11:
-        lettre = 'J';
+        lettre = 'j';
         break;
     case 12:
-        lettre = 'Q';
+        lettre = 'q';
         break;
     case 13:
-        lettre = 'K';
+        lettre = 'k';
         break;
     default:
-        lettre = 'X';
+        lettre = 'x';
         break;
     }
     return(lettre);
@@ -79,12 +79,13 @@ void AffichagePyramide(sCard* tab) {
         }
 
         // Cards display
-        if (tab[i].CardSlot = !0) {
+        if (tab[i].CardSlot == 1) {
             AffichageCarte(tab[i].Number, tab[i].Symbol);
         }
 
         else {
             printf("         ");
+            
         }
     }
 }

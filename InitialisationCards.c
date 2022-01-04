@@ -23,7 +23,7 @@ void InitialisationCards(sCard* tab) {
             tab[x].LeftParent = NULL;
             tab[x].Next = NULL;
             tab[x].Previous = NULL;
-            printf("%d, %c\n", tab[x].Number, tab[x].Symbol);
+            //printf("%d, %c\n", tab[x].Number, tab[x].Symbol);
             j += 1;
             x += 1;
         }
