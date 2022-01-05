@@ -1,10 +1,11 @@
+//JeanBaptiste F & Romain G & Pierre K
+
 #include "AffichagePlateau.h"
 
-//JeanBaptiste F & Romain G & Pierre K
 
 char AffichageCaseToLetter(int number) {
     char lettre;
-
+    
     switch (number) {
     case 1:
         lettre = 'a';
@@ -25,7 +26,7 @@ char AffichageCaseToLetter(int number) {
     return(lettre);
 }
 
-void AffichageCarte(number, symbol) {
+void AffichageCarte(number, symbol) { // when it's 10 there is one char more
     if (number == 10) {
         printf("|%d.%c|  ", number, symbol);
     }
@@ -84,13 +85,20 @@ void AffichagePyramide(sCard* tab) {
         }
 
         else {
-            printf("         ");
+            printf("        ");
             
         }
     }
 }
 
 void AffichageListes(sListCards* Fondation) {
+    /**
+     * This fonction get the Fondation address.
+     * Then print a fake reserve and fake fondation.
+     * Then print the last card of the fondation
+     * @author  Pierre KERZERHO
+     * @param   sListCards *Fondation : object Fondation
+     */
     printf("\n\n\n[X..X]  [>][>]  ");
     AffichageCarte(Fondation->Last->Number, Fondation->Last->Symbol);
     printf("\n");
@@ -98,6 +106,13 @@ void AffichageListes(sListCards* Fondation) {
 }
 
 void AffichagePlateau(sCard tab, sListCards* Fondation) {
+    /**
+     * This fonction get the Fondation address and the tab of cards.
+     * Then print the pyramide and the reserve and fondation.
+     * @author  Pierre KERZERHO
+     * @param   sListCards *Fondation : object Fondation
+     * @param   sCard tab : object card
+     */
     AffichagePyramide(&tab);
     AffichageListes(Fondation);
 }

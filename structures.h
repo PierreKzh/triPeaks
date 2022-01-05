@@ -49,3 +49,4 @@ void AffichagePlateau(sCard* tab);
 void Surname(sPlayer* play);
 void DrawCard(sListCards* Reserve, sListCards* Fondation);
 void PickCard(sCard* tabcard, sListCards* Fondation, int cardvalue, char cardColor);
+int Loose(sCard* tabCard, sListCards* Reserve, sListCards* Fondation);

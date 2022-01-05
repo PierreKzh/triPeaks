@@ -5,115 +5,177 @@
 
 int main(void) {
 
-    //=========InitialistionCards test=========
+    //=========InitialistionCard=========
     sCard TabCard[52];
     InitialisationCards(&TabCard);
-    //printf("apres initialisation : %d", TabCard[1].IdCard);
-    //=========ShuffleCards test=========
+
+    //=========ShuffleCards=========
     ShuffleCards(&TabCard);
-    //printf("apres shuffle : %d", TabCard[1].IdCard);
 
-    //=========win test=========
-    /*sListCards Reserve2;
-    sListCards Fondation2;
-    Reserve.NumberElements = 24;
-    Fondation.NumberElements = 25;
-    printf("\n%d", win(&Reserve2, &Fondation2));*/
-
-    //=========initialisationPyramide test=========
+    //=========initialisationPyramide=========
     InitialisationPyramide(&TabCard);
 
-    //=========initialisationListOaked test========
+    //=========initialisationListOaked========
     sListCards Reserve;
     Reserve.NumberElements = 0;
     sListCards Fondation;
     Fondation.NumberElements = 0;
     InitialisationListeOaked(&TabCard, &Reserve, &Fondation);
-    //printf("\nnb elements reserve : %d", Reserve.NumberElements);
-    //printf("\nnb element fondation : %d\n", Fondation.NumberElements);
 
-    //=========AffichagePyramide test=========
-    /*AffichagePlateau(&TabCard, &Fondation2);*/
-
-    //=========Surname test=========
-    /*sPlayer play;
+    //=========Surname=========
+    sPlayer play;
     Surname(&play);
-    free(play.surname);*/
-
-    //==========DrawCard test==================
-    /*printf("\ndernier de reserve  : %d", Reserve.Last->IdCard);
-    printf("\ndernier de fondation  : %d", Fondation.Last->IdCard);
-    DrawCard(&Reserve, &Fondation);
-    printf("\ndernier de reserve  : %d", Reserve.Last->IdCard);
-    printf("\ndernier de fondation  : %d", Fondation.Last->IdCard);*/
-
-    //========== Jeu ==============
-    while (win(&Reserve, &Fondation) == 0) {
-        system("@cls||clear");;
+    
+    //==========GameLoop==============
+    while (win(&Reserve, &Fondation) == 0 || Loose(&TabCard, &Reserve, &Fondation) == 0) {
+        
+        system("@cls||clear");
         AffichagePlateau(&TabCard, &Fondation);
-        char cardColor;
+        
+        
         char cardValue;
-        int cardNumber;
+        char cardColor = ' ';
+        int cardNumber = 0;
+        
+        char entry;
         int Choice;
+        
+        int verif = 0;
+        printf("\n0 : Draw card on the reserve\n1 : Pick card on the board\n2 : Exit\n> ");
+        scanf("%c", &entry);
+        while (verif == 0){
+            scanf("%c", &entry);
+            
+            switch (entry) {
+            case '0':
+                Choice = 0;
+                break;
+            case '1':
+                Choice = 1;
+                break;
+            case '2':
+                Choice = 2;
+                break;
+            default:
+                Choice = 3;
+                break;
+            }
 
-        printf("\n0 : Draw card on the reserve\n1 : Pick card on the board [X..X] ");
-        scanf("%d", &Choice);
+            if (Choice == 2) {
+                cardValue = 'a';
+                return 0;
+            }
+
+            if (Choice == 0 || Choice == 1){
+                verif = 1;
+            }
+            else {
+                system("@cls||clear");
+                AffichagePlateau(&TabCard, &Fondation);
+                printf("\n0 : Draw card on the reserve\n1 : Pick card on the board\n2 : Exit\n> ");
+                verif = 0;
+            }
+        }
 
         if (Choice == 0) {
             DrawCard(&Reserve, &Fondation);
+            win(&Reserve, &Fondation);
+            Loose(&TabCard, &Reserve, &Fondation);
         }
+
         else if (Choice == 1) {
-            printf("\nEnter value :\n> ");
-            scanf("%s", &cardValue);
-            printf("\nEnter symbol :\n> ");
-            scanf(" %c", &cardColor);
-            printf("%c\n", cardColor);
-            switch (cardValue) {
-            case 'a':
-                cardNumber = 1;
-                break;
-            case '2':
-                cardNumber = 2;
-                break;
-            case '3':
-                cardNumber = 3;
-                break;
-            case '4':
-                cardNumber = 4;
-                break;
-            case '5':
-                cardNumber = 5;
-                break;
-            case '6':
-                cardNumber = 6;
-                break;
-            case '7':
-                cardNumber = 7;
-                break;
-            case '8':
-                cardNumber = 8;
-                break;
-            case '9':
-                cardNumber = 9;
-                break;
-            case '10':
-                cardNumber = 10;
-                break;
-            case 'j':
-                cardNumber = 11;
-                break;
-            case 'q':
-                cardNumber = 12;
-                break;
-            case 'k':
-                cardNumber = 13;
-                break;
-            default:
-                cardNumber = 0;
-                break;
+            while (cardNumber == 0) {
+                system("@cls||clear");
+                AffichagePlateau(&TabCard, &Fondation);
+                printf("\n0 : Draw card on the reserve\n1 : Pick card on the board\n2 : Exit\n> %d", Choice);
+                printf("\nEnter value :\n> ");
+                scanf("%s", &cardValue);
+                switch (cardValue) {
+                case 'a':
+                    cardNumber = 1;
+                    break;
+                case '2':
+                    cardNumber = 2;
+                    break;
+                case '3':
+                    cardNumber = 3;
+                    break;
+                case '4':
+                    cardNumber = 4;
+                    break;
+                case '5':
+                    cardNumber = 5;
+                    break;
+                case '6':
+                    cardNumber = 6;
+                    break;
+                case '7':
+                    cardNumber = 7;
+                    break;
+                case '8':
+                    cardNumber = 8;
+                    break;
+                case '9':
+                    cardNumber = 9;
+                    break;
+                case '1':
+                    cardNumber = 10;
+                    break;
+                case 'j':
+                    cardNumber = 11;
+                    break;
+                case 'q':
+                    cardNumber = 12;
+                    break;
+                case 'k':
+                    cardNumber = 13;
+                    break;
+                default:
+                    cardNumber = 0;
+                    break;
+                }
             }
+
+            while (cardColor != 't' && cardColor != 'h' && cardColor !='c' && cardColor != 'p') {
+                system("@cls||clear");
+                AffichagePlateau(&TabCard, &Fondation);
+                printf("\n0 : Draw card on the reserve\n1 : Pick card on the board\n2 : Exit\n> %d", Choice);
+                printf("\nEnter value :\n> %c\n", cardValue);
+                printf("\nEnter symbol :\n> ");
+                scanf(" %c", &cardColor);
+            }
+
             PickCard(&TabCard, &Fondation, cardNumber, cardColor);
+            win(&Reserve, &Fondation);
+            Loose(&TabCard, &Reserve, &Fondation);
         }
     }
+    if (win(&Reserve, &Fondation) == 1) {
+        system("@cls||clear");
+        printf(
+        ":::     ::: ::::::::::: :::::::: ::::::::::: ::::::::  :::::::::  :::   ::: \n"
+        ":+:     :+:     :+:    :+:    :+:    :+:    :+:    :+: :+:    :+: :+:   :+: \n"
+        "+:+     +:+     +:+    +:+           +:+    +:+    +:+ +:+    +:+  +:+ +:+  \n"
+        "+#+     +:+     +#+    +#+           +#+    +#+    +:+ +#++:++#:    +#++:   \n"
+        " +#+   +#+      +#+    +#+           +#+    +#+    +#+ +#+    +#+    +#+    \n"
+        "  #+#+#+#       #+#    #+#    #+#    #+#    #+#    #+# #+#    #+#    #+#    \n"
+        "    ###     ########### ########     ###     ########  ###    ###    ###    \n"
+        );
+
+    }
+    else if (Loose(&TabCard, &Reserve, &Fondation) == 1) {
+        system("@cls||clear");
+        printf(
+        " ::::::::      :::     ::::    ::::  ::::::::::       ::::::::  :::     ::: :::::::::: :::::::::  \n"
+        ":+:    :+:   :+: :+:   +:+:+: :+:+:+ :+:             :+:    :+: :+:     :+: :+:        :+:    :+: \n"
+        "+:+         +:+   +:+  +:+ +:+:+ +:+ +:+             +:+    +:+ +:+     +:+ +:+        +:+    +:+ \n"
+        ":#:        +#++:++#++: +#+  +:+  +#+ +#++:++#        +#+    +:+ +#+     +:+ +#++:++#   +#++:++#:  \n"
+        "+#+   +#+# +#+     +#+ +#+       +#+ +#+             +#+    +#+  +#+   +#+  +#+        +#+    +#+ \n"
+        "#+#    #+# #+#     #+# #+#       #+# #+#             #+#    #+#   #+#+#+#   #+#        #+#    #+# \n"
+        " ########  ###     ### ###       ### ##########       ########      ###     ########## ###    ### \n"
+        );
+    }
+    free(play.surname);
     return 0;
 }
+

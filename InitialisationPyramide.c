@@ -7,7 +7,6 @@ void InitialisationPyramide(sCard* tab) {
     while (i < 28) {
         tab[i].ReturnedCard = 1;
         tab[i].CardSlot = 1;
-        printf("%d : %d\n", tab[i].IdCard, tab[i].CardSlot);
         i += 1;
     }
 

@@ -10,26 +10,24 @@ void PickCard(sCard* tabcard, sListCards* Fondation, int cardvalue, char cardCol
      */
     int i = 0;
     int j = 0;
-    sCard *previous;
+    sCard *previous; // temp value
     while (i <= 51) {
+        // rules of the game
         if (tabcard[i].Number == cardvalue && tabcard[i].Symbol == cardColor && tabcard[i].CardSlot == 1 && tabcard[i].LeftChild == NULL && tabcard[i].RightChild == NULL && (Fondation->Last->Number == tabcard[i].Number + 1 || Fondation->Last->Number == tabcard[i].Number - 1)) {
             while (j <= 51) {
                 if (tabcard[j].LeftChild == &tabcard[i]) {
                     tabcard[j].LeftChild = NULL;
-                    printf("%d", tabcard[j].Number);
                 }
                 else if (tabcard[j].RightChild == &tabcard[i]) {
                     tabcard[j].RightChild = NULL;
-                    printf("%d", tabcard[j].Number);
                 }
                 j++;
             }
             tabcard[i].CardSlot = 3;
-            previous = Fondation->Last;
+            previous = Fondation->Last; // temp value
             Fondation->Last = &tabcard[i];
             previous->Next = Fondation->Last;
             Fondation->Last->Previous = &previous;
-            printf("ok");
             break;
         }
         i++;

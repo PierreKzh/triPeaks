@@ -1,11 +1,13 @@
 #include "Surname.h"
 
-//Romain G
-
 void Surname(sPlayer* play) {
-    printf("\n\nEntrez un pseudo\n: ");
+    /**
+     * This fonction get the address of the player.
+     * Then ask the player to get is pseudonyme.
+     * @author  Romain GADANI
+     * @param   sPlayer play : object player
+     */
+    printf("Enter a name : \n> ");
     play->surname = malloc(sizeof(sPlayer));
     scanf("%s", play->surname);
-    printf("Vous avez choisi le pseudo \"%s\"\n", play->surname);
-    printf("\n");
 }

@@ -8,7 +8,7 @@ int win(sListCards* Reserve, sListCards* Fondation) {
      * @author  Pierre KERZERHO
      * @param   sListCards *Reserve : object Reserve
      * @param   sListCards *Fondation : object Fondation
-     * @return  int : 1 for win, 0 for loose
+     * @return  int : 1 for win, 0 for continue
      */
     int NumberCards = 0;
     NumberCards += Reserve->NumberElements;
