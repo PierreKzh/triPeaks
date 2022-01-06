@@ -1,7 +1,7 @@
 
 =================================TriPeaks===============================
 
-Mini projet algo & C
+# Mini projet algo & C
 
 Jean-Baptiste F, Romain G, Pierre K
 
