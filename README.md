@@ -1,28 +1,30 @@
 
-=================================TriPeaks===============================
+#=================================TriPeaks===============================
 
-# Mini projet algo & C
+## Mini projet algo & C
 
 Jean-Baptiste F, Romain G, Pierre K
 
 ========================================================================
 
--Objective : Remove all the cards from the three pyramids.
+### Objective : 
+           Remove all the cards from the three pyramids.
 
--Rules : You can only take card with a value equal to one less or one more that the last card.
+### Rules :
+           You can only take card with a value equal to one less or one more that the last card.
 
 ========================================================================
 
-Description cards : 
+### Description cards : 
 
-Symbol : 
+1. Symbol : 
 
 s : spades
 h : hearts
 d : diamonds
 c : clubs
 
-Number : 
+2. Number : 
 
 a : ace
 2
@@ -40,7 +42,8 @@ k : king
 
 ========================================================================
 
-Here is an example :
+**Here is an example :**
+
 [X.22] = reserve
 |7..s| = Fondation
 
