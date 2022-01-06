@@ -1,9 +1,8 @@
+//Jean-Baptiste F
 #include "ShuffleCards.h"
 
-//Jean-Baptiste F
-
 // Function Random position allocation
-void random(sCard* tab) {
+void random(sCard* tab[52]) {
     //Initialise srand sur le temps actuel
     srand(time(NULL));
 
@@ -11,17 +10,15 @@ void random(sCard* tab) {
         // Random Position between 0 and i
         int RandomPosition = rand() % (i + 1);
         // Starts the function exchange
-        sCard tmp;
+        sCard *tmp;
         tmp = tab[i];
         tab[i] = tab[RandomPosition];
         tab[RandomPosition] = tmp;
     }
 }
 
-/*==================================================================================================================================*/
-
 // Main Function from ShuffleCards
-void ShuffleCards(sCard* tab) {
+void ShuffleCards(sCard* tab[52]) {
     int Position[NbCards];
     int i;
 

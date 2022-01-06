@@ -9,8 +9,8 @@
 typedef struct Card sCard;
 struct Card {
     int Number;         // 1 to 13
-    char Symbol;        // carreau or pic or trefle or coeur
-    int ReturnedCard;   // 0 or 1
+    char Symbol;        // spades, hearts, diamonds and clubs
+    int ReturnedCard;   // 0 hiden or 1 visible
     int CardSlot;       // 0 = no slot or 1 = tree or 2 = reserve or 3 = fondation
     int IdCard;         // 1 to 52
     sCard* RightChild;  // FALSE or &AdresseMemoire
@@ -40,13 +40,12 @@ struct Player {
 };
 typedef struct Player sPlayer;
 
-void InitialisationCards(sCard* tab);
-void ShuffleCards(sCard* tab);
-void InitialisationPyramide(sCard* tab);
-int win(sListCards* Reserve, sListCards* Fondation);
-void InitialisationListeOaked(sCard* tabCard, sListCards* Reserve, sListCards* Fondation);
-void AffichagePlateau(sCard* tab);
+void InitialisationCards(sCard* tab[52]);
+void ShuffleCards(sCard* tab[52]);
+void InitialisationPyramide(sCard* tab[52]);
+void InitialisationListeOaked(sCard* tabCard[52], sListCards* Reserve, sListCards* Fondation);
+void AffichagePlateau(sCard* tab[52], sListCards* Fondation, sListCards* Reserve);
 void Surname(sPlayer* play);
 void DrawCard(sListCards* Reserve, sListCards* Fondation);
-void PickCard(sCard* tabcard, sListCards* Fondation, int cardvalue, char cardColor);
-int Loose(sCard* tabCard, sListCards* Reserve, sListCards* Fondation);
+void PickCard(sCard* tabcard[52], sListCards* Fondation, int cardvalue, char cardColor);
+int LooseWin(sCard* tabCard[52], sListCards* Reserve, sListCards* Fondation);
